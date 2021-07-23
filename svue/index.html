@@ -1,0 +1,22 @@
+<div id="app">
+  <p @click="counter++">{{age}}</p>
+  {{counter}}
+  <h1 s-text="title"></h1>
+  <h1 s-html="desc"></h1>
+  <input s-model="desc" />
+</div>
+
+<script src="./svue.js"></script>
+<script>
+  const app = new SVue({
+    el: '#app',
+    data: {
+      counter: 1,
+      age: 23,
+      title: 'title',
+      desc: '<p>this is elecllent</p>'
+    }
+  })
+  // setInterval(()=>{app.counter++},200)
+  
+</script>
